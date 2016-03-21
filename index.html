@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css" />
+        
+    </head>
+    <base href="/">
+    <body>
+        <cache vary-by="@Context.Request.Path">
+            <shopping-list>
+                Loading...
+            </shopping-list>
+        </cache>
+
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/lodash/core.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="node_modules/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="node_modules/systemjs/dist/system.src.js"></script>
+        <script src="node_modules/rxjs/bundles/Rx.js"></script>
+        <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
+        <script src="node_modules/angular2/bundles/router.dev.js"></script>
+        <script src="node_modules/angular2/bundles/http.dev.js"></script>
+        <script>
+            System.config({
+                packages: {        
+                    app: {
+                        format: 'register',
+                        defaultExtension: 'js'
+                    }
+                },
+                map: {
+                    lodash: 'node_modules/lodash/core.js'
+                },
+            });
+            System.import('app/bootstrap')
+                    .then(null, console.error.bind(console));
+
+        </script>
+    </body>
+</html>
+

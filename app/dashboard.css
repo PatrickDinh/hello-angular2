@@ -1,0 +1,39 @@
+.dishes-wapper {
+    
+}
+
+.dishes {
+    display: inline-block;
+}
+
+.dish {
+    width: 250px;
+    margin: 1%;
+    background-color: #cccccc;
+    position: relative;
+    display: inline-block;
+}
+
+.dish p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dish-img {
+    text-align: center;
+}
+
+.dish-a {
+    bottom:0;
+    left:0;
+    position: absolute;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.dish img {
+    width: 80%;
+}

@@ -1,0 +1,16 @@
+<a class="btn" [routerLink]="['Cart']">Cart</a>
+
+<div class="dishes-wapper">
+    <div class="dishes">
+        <div class="dish" *ngFor="#dish of dishes">
+            <p>{{dish.name}}</p>
+            <div class="dish-img" (click)="onSelect(dish)">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg" />        
+            </div>
+            <div class="dish-a" [ngStyle]="!dish.expanded ? {'display': 'none'} : null">
+                <a class="btn btn-success btn-sm" (click)="onAddDish(dish)">Add</a>
+                <a class="btn btn-info btn-sm" [routerLink]="['Dish', {id: dish.id}]">More</a>
+            </div>
+        </div>
+    </div>
+</div> 
